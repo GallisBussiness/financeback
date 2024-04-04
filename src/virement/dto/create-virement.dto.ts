@@ -9,7 +9,7 @@ export class CreateVirementDto {
     @IsMongoId()
     to: string;
 
-    @IsNotEmpty()
+    @IsNotEmpty()  
     @IsInt()
     montant: number;
 }

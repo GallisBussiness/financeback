@@ -14,12 +14,12 @@ async function bootstrap() {
   app.useStaticAssets(join(__dirname, '..', 'uploads'), {
     prefix: '/uploads/',
     setHeaders: (res, path, stat) => {
-      res.set('Access-Control-Allow-Origin', '*');
+      res.set('Access-Control-Allow-Origin', 'https://finance.crousz.app');
     }
   });
   app.use(helmet());
   app.enableCors({
-    origin: '*'
+    origin: 'https://finance.crousz.app'
   });
   app.useGlobalPipes(
     new ValidationPipe({
